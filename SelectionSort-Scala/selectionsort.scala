@@ -8,12 +8,12 @@
  * Average case performance: O(n^2)
  * Worst case space complexity: O(n) total, O(1) auxiliary
  */ 
-object SelectSort {
+object SelectionSort {
   def main(args: Array[String]) {
-    println(selectSort(Seq(2, 8, 6, 1, 2, -1, -4, 5, 99, 83, 7)))
+    println(selectionSort(Seq(2, 8, 6, 1, 2, -1, -4, 5, 99, 83, 7)))
   }
 
-  def selectSort[T](numbers: Seq[T])(implicit n: Numeric[T], t: ClassManifest[T]): Seq[T] = {
+  def selectionSort[T](numbers: Seq[T])(implicit n: Numeric[T], t: ClassManifest[T]): Seq[T] = {
     var sortNumbers = numbers.toArray
     var startIndex = 0;
     var switchIndex = 0
